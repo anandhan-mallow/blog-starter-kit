@@ -72,7 +72,7 @@ export default function RootLayout({
             };
             brandwell.load("brandwell-testing");
         })();
-    </script>
+        </script>
       </head>
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
