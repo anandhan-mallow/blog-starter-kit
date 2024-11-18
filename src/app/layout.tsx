@@ -56,6 +56,23 @@ export default function RootLayout({
         />
         <meta name="theme-color" content="#000" />
         <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+        <script type="text/javascript">
+        (function () {
+            var brandwell = window.brandwell || (window.brandwell = []);
+            if (brandwell.invoked) return;
+            brandwell.invoked = true;
+            brandwell.load = function (bwAppId) {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.async = true;
+                script.src = "https://script.brandwell.ai/tracking.min.js";
+                var n = document.getElementsByTagName("script")[0];
+                n.parentNode.insertBefore(script, n);
+                brandwell.appId = bwAppId;
+            };
+            brandwell.load("brandwell-testing");
+        })();
+    </script>
       </head>
       <body
         className={cn(inter.className, "dark:bg-slate-900 dark:text-slate-400")}
