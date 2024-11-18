@@ -1,5 +1,6 @@
 export function Brandwell() {
   return (
+    <script type="text/javascript">
     (function () {
             var brandwell = window.brandwell || (window.brandwell = []);
             if (brandwell.invoked) return;
@@ -15,6 +16,7 @@ export function Brandwell() {
             };
             brandwell.load("brandwell-testing");
         })();
+      </script>
   );
 }
 
