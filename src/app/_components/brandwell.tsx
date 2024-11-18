@@ -1,6 +1,8 @@
+import Script from 'next/script';
+
 export function Brandwell() {
   return (
-    <script type="text/javascript">
+    <Script>
     (function () {
             var brandwell = window.brandwell || (window.brandwell = []);
             if (brandwell.invoked) return;
@@ -16,7 +18,7 @@ export function Brandwell() {
             };
             brandwell.load("brandwell-testing");
         })();
-      </script>
+      </Script>
   );
 }
 
